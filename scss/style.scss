@@ -1,2 +1,199 @@
 @import 'normolize.scss';
 
+@font-face{
+    font-family: 'Quotus Bold';
+    src: url('../fonts/Quotus-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Quotus Thin';
+    src: url('../fonts/Quotus-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Roboto Medium';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Roboto Regular';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Roboto Lt';
+    src: url('../fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Roboto Bold';
+    src: url('../fonts/DroidSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin font-q-bold {
+    font-family: 'Quotus Bold', sans-serif;
+}
+
+@mixin font-q-thin {
+    font-family: 'Quotus Thin', sans-serif;
+}
+
+@mixin font-r-medium {
+    font-family: 'Roboto Medium', sans-serif;
+}
+
+@mixin font-r-regular {
+    font-family: 'Roboto Regular', sans-serif;
+}
+
+@mixin font-r-lt {
+    font-family: 'Roboto Lt', sans-serif;
+}
+
+@mixin font-r-bold {
+    font-family: 'Roboto Bold', sans-serif;
+}
+
+body{
+    color: #242424;
+}
+
+.button{
+    @include font-r-bold;
+    color: white;
+    font-size: 31px;
+    background-color: #3acdd5;
+    display: inline-block;
+    padding: 23px 79px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    &:hover{
+    background-color: #34bec5;
+    transition: all 0.2s ease-in;
+    }
+}
+
+.header{
+    background: url('../img/header.jpg') no-repeat 50%;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        background: url('../img/header2.png') no-repeat 50%;
+        z-index: 5;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .header-inner{
+        height: 1316px;
+        text-align: center;
+        position: relative;
+        z-index: 10;
+        .logoSearchCart{
+            padding-top: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            width: 87%;
+            .null{
+                width: 33%;
+            }
+            .logo{
+                width: 33%;
+                img{
+                    max-width: 100%;
+                }
+            }
+            .SearchCart{
+                width: 33%;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                img{
+                    margin: 0 30px;
+                }
+            }
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            margin: 60px auto 0 auto;
+            width: 51%;
+            list-style: none;
+            font-size: 23px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            @include font-q-bold;
+            a{
+                text-decoration: none;
+                color: #242424;
+                &:hover{
+                    border-bottom: 2px solid #242424;
+                }
+            }
+        }
+        .header-subtitle{
+            margin-top: 68px;
+            color: black;
+            font-size: 35px;
+            @include font-q-thin;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+        }
+    }
+    .header-title{
+        position: absolute;
+        font-size: 175px;
+        @include font-q-bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        transform: scaleY(1.1);
+        z-index: 4;
+        top: 335px;
+        left: 50%;
+        margin-left:-500px;
+    }
+}
+
+.section-inner{
+    width: 1465px;
+    margin: 0 auto;
+}
+
+.best-travel{
+    max-width: 731px;
+    position: absolute;
+    top: 1020px;
+    &-title{
+        @include font-q-bold;
+        font-size: 80px;
+    }
+    &-subtitle{
+        @include font-q-thin;
+        font-size: 80px;
+    }
+    &-text{
+        @include font-r-lt;
+        font-size: 21px;
+        line-height: 42px;
+        padding: 40px 0;
+    }
+    &-button{}
+}
