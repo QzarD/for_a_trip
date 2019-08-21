@@ -577,9 +577,9 @@ body {
       .sign-up .section-inner .sign-up-FormButton input {
         font-family: 'Roboto Medium', sans-serif;
         font-size: 18px;
-        text-align: center;
-        width: 365px;
-        height: 72px;
+        padding-left: 80px;
+        width: 285px;
+        height: 70px;
         border: none;
         border-radius: 50px;
         margin-bottom: 355px; }
@@ -594,3 +594,30 @@ body {
     width: 100%;
     background: url("../img/mountaing.png") no-repeat 50%;
     background-size: cover; }
+
+.footer {
+  margin-top: 50px; }
+  .footer .wrapper {
+    display: flex;
+    justify-content: space-between; }
+    .footer .wrapper .col {
+      margin: 0 55px;
+      list-style: none;
+      line-height: 1.7;
+      color: black; }
+      .footer .wrapper .col a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Roboto Lt', sans-serif;
+        font-size: 30px; }
+        .footer .wrapper .col a:hover {
+          border-bottom: 2px solid #242424; }
+      .footer .wrapper .col .text {
+        font-family: 'Quotus Bold', sans-serif;
+        font-size: 42px; }
+  .footer .social {
+    margin: 200px 0 100px 0;
+    display: flex;
+    justify-content: center; }
+    .footer .social .block:not(:first-child) {
+      margin-left: 20px; }
