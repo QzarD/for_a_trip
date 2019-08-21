@@ -1,2 +1,2 @@
 # for_a_trip
-landing
+landing/shop
