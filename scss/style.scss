@@ -320,3 +320,28 @@ body{
         }
     }
 }
+
+.camera-lenses{
+    margin-top: 115px;
+    .lens{
+        margin-top: 70px;
+        .row{
+            .thing{
+                .thing-title{
+                    margin-top: 50px;
+                    min-height: 65px;
+                }
+            }
+        }
+        .row2{
+            margin-top: 30px;
+            justify-content: center;
+            .thing{
+                .thing-title{
+                    max-width: 970px;
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}

@@ -533,3 +533,17 @@ body {
     margin-top: 90px; }
     .cameras-tripod .row .thing .thing-title {
       min-height: 65px; }
+
+.camera-lenses {
+  margin-top: 115px; }
+  .camera-lenses .lens {
+    margin-top: 70px; }
+    .camera-lenses .lens .row .thing .thing-title {
+      margin-top: 50px;
+      min-height: 65px; }
+    .camera-lenses .lens .row2 {
+      margin-top: 30px;
+      justify-content: center; }
+      .camera-lenses .lens .row2 .thing .thing-title {
+        max-width: 970px;
+        margin-top: 50px; }
