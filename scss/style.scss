@@ -133,6 +133,12 @@ body{
     }
 }
 
+
+.center-button{
+    margin-top: 65px;
+    text-align: center;
+}
+
 .buttons{
     margin-top: 45px;
     display: flex;
@@ -151,6 +157,26 @@ body{
             transition: text 0.2s ease-in;
             border-bottom: 2px solid #34bec5;
             }
+        }
+    }
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.thing{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .image{
+        display: flex;
+        align-items: center;
+        img{
+            max-width: 100%;
         }
     }
 }
@@ -269,23 +295,8 @@ body{
     margin-top: 375px;
     .bags{
         .row{
-            display: flex;
-            justify-content: space-between;
-            .bag{
+            .thing{
                 margin: 40px 0;
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                .image{
-                    display: flex;
-                    align-items: center;
-                    height: 469px;
-                    img{
-                        max-width: 100%;
-                    }
-                }
             }
         }
     }
@@ -293,21 +304,19 @@ body{
 
 .our-camps{
     margin-top: 80px;
-    .camps{
+    .row{
         margin-top: 90px;
-        display: flex;
-        justify-content: space-between;
-        .camp{
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
     }
-    .our-camps-button{
-        margin-top: 65px;
-        text-align: center;
+}
+
+.cameras-tripod{
+    margin-top: 115px;
+    .row{
+        margin-top: 90px;
+        .thing{
+            .thing-title{
+                min-height: 65px;
+            }
         }
     }
 }

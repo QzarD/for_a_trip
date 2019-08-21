@@ -391,6 +391,10 @@ body {
   .priceCart .cart img {
     margin-left: 10px; }
 
+.center-button {
+  margin-top: 65px;
+  text-align: center; }
+
 .buttons {
   margin-top: 45px;
   display: flex;
@@ -407,6 +411,22 @@ body {
         color: #34bec5;
         transition: text 0.2s ease-in;
         border-bottom: 2px solid #34bec5; }
+
+.row {
+  display: flex;
+  justify-content: space-between; }
+
+.thing {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .thing .image {
+    display: flex;
+    align-items: center; }
+    .thing .image img {
+      max-width: 100%; }
 
 .header {
   background: url("../img/header.jpg") no-repeat 50%;
@@ -499,36 +519,17 @@ body {
 
 .new-arrivals {
   margin-top: 375px; }
-  .new-arrivals .bags .row {
-    display: flex;
-    justify-content: space-between; }
-    .new-arrivals .bags .row .bag {
-      margin: 40px 0;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      .new-arrivals .bags .row .bag .image {
-        display: flex;
-        align-items: center;
-        height: 469px; }
-        .new-arrivals .bags .row .bag .image img {
-          max-width: 100%; }
+  .new-arrivals .bags .row .thing {
+    margin: 40px 0; }
 
 .our-camps {
   margin-top: 80px; }
-  .our-camps .camps {
-    margin-top: 90px;
-    display: flex;
-    justify-content: space-between; }
-    .our-camps .camps .camp {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-  .our-camps .our-camps-button {
-    margin-top: 65px;
-    background: #000;
-    text-align: center; }
+  .our-camps .row {
+    margin-top: 90px; }
+
+.cameras-tripod {
+  margin-top: 115px; }
+  .cameras-tripod .row {
+    margin-top: 90px; }
+    .cameras-tripod .row .thing .thing-title {
+      min-height: 65px; }
