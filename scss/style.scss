@@ -66,7 +66,7 @@
     font-family: 'Roboto Bold', sans-serif;
 }
 
-//------------
+// <----- COMMON 
 
 
 body{
@@ -108,7 +108,54 @@ body{
     margin: 0 auto;
 }
 
-//------------
+.thing-title{
+    margin-top: 15px;
+    @include font-r-medium;
+    max-width: 320px;
+    color: #343434;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.priceCart{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    .price{
+        @include font-r-bold;
+        font-size: 20px;
+        color: #343434;
+    }
+    .cart{
+        img{
+            margin-left: 10px;
+        }
+    }
+}
+
+.buttons{
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    .button_blue{
+        @include font-r-regular;
+        font-size: 32px;
+        &:not(:first-child){
+            margin-left: 200px;
+        }
+        a{
+            color: #3acdd5;
+            text-decoration: none;
+            &:hover{
+            color: #34bec5;
+            transition: text 0.2s ease-in;
+            border-bottom: 2px solid #34bec5;
+            }
+        }
+    }
+}
+
+// COMMON ----->
 
 
 .header{
@@ -220,27 +267,6 @@ body{
 
 .new-arrivals{
     margin-top: 375px;
-    .buttons{
-        margin-top: 45px;
-        display: flex;
-        justify-content: center;
-        .button_blue{
-            @include font-r-regular;
-            font-size: 32px;
-            &:not(:first-child){
-                margin-left: 200px;
-            }
-            a{
-                color: #3acdd5;
-                text-decoration: none;
-                &:hover{
-                color: #34bec5;
-                transition: text 0.2s ease-in;
-                border-bottom: 2px solid #34bec5;
-                }
-            }
-        }
-    }
     .bags{
         .row{
             display: flex;
@@ -260,30 +286,28 @@ body{
                         max-width: 100%;
                     }
                 }
-                .bag-subtitle{
-                    margin-top: 15px;
-                    @include font-r-medium;
-                    max-width: 320px;
-                    color: #343434;
-                    font-size: 15px;
-                    line-height: 1.5;
-                }
-                .priceCart{
-                    display: flex;
-                    justify-content: center;
-                    margin-top: 10px;
-                    .price{
-                        @include font-r-bold;
-                        font-size: 20px;
-                        color: #343434;
-                    }
-                    .cart{
-                        img{
-                            margin-left: 10px;
-                        }
-                    }
-                }
             }
+        }
+    }
+}
+
+.our-camps{
+    margin-top: 80px;
+    .camps{
+        margin-top: 90px;
+        display: flex;
+        justify-content: space-between;
+        .camp{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .our-camps-button{
+        margin-top: 65px;
+        text-align: center;
         }
     }
 }

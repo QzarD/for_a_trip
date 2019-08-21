@@ -372,6 +372,42 @@ body {
   max-width: 1465px;
   margin: 0 auto; }
 
+.thing-title {
+  margin-top: 15px;
+  font-family: 'Roboto Medium', sans-serif;
+  max-width: 320px;
+  color: #343434;
+  font-size: 15px;
+  line-height: 1.5; }
+
+.priceCart {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; }
+  .priceCart .price {
+    font-family: 'Roboto Bold', sans-serif;
+    font-size: 20px;
+    color: #343434; }
+  .priceCart .cart img {
+    margin-left: 10px; }
+
+.buttons {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center; }
+  .buttons .button_blue {
+    font-family: 'Roboto Regular', sans-serif;
+    font-size: 32px; }
+    .buttons .button_blue:not(:first-child) {
+      margin-left: 200px; }
+    .buttons .button_blue a {
+      color: #3acdd5;
+      text-decoration: none; }
+      .buttons .button_blue a:hover {
+        color: #34bec5;
+        transition: text 0.2s ease-in;
+        border-bottom: 2px solid #34bec5; }
+
 .header {
   background: url("../img/header.jpg") no-repeat 50%;
   position: relative; }
@@ -463,22 +499,6 @@ body {
 
 .new-arrivals {
   margin-top: 375px; }
-  .new-arrivals .buttons {
-    margin-top: 45px;
-    display: flex;
-    justify-content: center; }
-    .new-arrivals .buttons .button_blue {
-      font-family: 'Roboto Regular', sans-serif;
-      font-size: 32px; }
-      .new-arrivals .buttons .button_blue:not(:first-child) {
-        margin-left: 200px; }
-      .new-arrivals .buttons .button_blue a {
-        color: #3acdd5;
-        text-decoration: none; }
-        .new-arrivals .buttons .button_blue a:hover {
-          color: #34bec5;
-          transition: text 0.2s ease-in;
-          border-bottom: 2px solid #34bec5; }
   .new-arrivals .bags .row {
     display: flex;
     justify-content: space-between; }
@@ -495,20 +515,20 @@ body {
         height: 469px; }
         .new-arrivals .bags .row .bag .image img {
           max-width: 100%; }
-      .new-arrivals .bags .row .bag .bag-subtitle {
-        margin-top: 15px;
-        font-family: 'Roboto Medium', sans-serif;
-        max-width: 320px;
-        color: #343434;
-        font-size: 15px;
-        line-height: 1.5; }
-      .new-arrivals .bags .row .bag .priceCart {
-        display: flex;
-        justify-content: center;
-        margin-top: 10px; }
-        .new-arrivals .bags .row .bag .priceCart .price {
-          font-family: 'Roboto Bold', sans-serif;
-          font-size: 20px;
-          color: #343434; }
-        .new-arrivals .bags .row .bag .priceCart .cart img {
-          margin-left: 10px; }
+
+.our-camps {
+  margin-top: 80px; }
+  .our-camps .camps {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between; }
+    .our-camps .camps .camp {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+  .our-camps .our-camps-button {
+    margin-top: 65px;
+    background: #000;
+    text-align: center; }
