@@ -66,6 +66,9 @@
     font-family: 'Roboto Bold', sans-serif;
 }
 
+//------------
+
+
 body{
     color: #242424;
 }
@@ -84,6 +87,29 @@ body{
     transition: all 0.2s ease-in;
     }
 }
+
+.title{
+    @include font-q-thin;
+    font-size: 68px;
+    text-align: center;
+}
+
+.subtitle{
+    margin: 30px auto 0 auto;
+    @include font-r-regular;
+    font-size: 24px;
+    text-align: center;
+    max-width: 850px;
+    line-height: 1.5;
+}
+
+.section-inner{
+    max-width: 1465px;
+    margin: 0 auto;
+}
+
+//------------
+
 
 .header{
     background: url('../img/header.jpg') no-repeat 50%;
@@ -172,11 +198,6 @@ body{
     }
 }
 
-.section-inner{
-    width: 1465px;
-    margin: 0 auto;
-}
-
 .best-travel{
     max-width: 731px;
     position: absolute;
@@ -195,5 +216,74 @@ body{
         line-height: 42px;
         padding: 40px 0;
     }
-    &-button{}
+}
+
+.new-arrivals{
+    margin-top: 375px;
+    .buttons{
+        margin-top: 45px;
+        display: flex;
+        justify-content: center;
+        .button_blue{
+            @include font-r-regular;
+            font-size: 32px;
+            &:not(:first-child){
+                margin-left: 200px;
+            }
+            a{
+                color: #3acdd5;
+                text-decoration: none;
+                &:hover{
+                color: #34bec5;
+                transition: text 0.2s ease-in;
+                border-bottom: 2px solid #34bec5;
+                }
+            }
+        }
+    }
+    .bags{
+        .row{
+            display: flex;
+            justify-content: space-between;
+            .bag{
+                margin: 40px 0;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .image{
+                    display: flex;
+                    align-items: center;
+                    height: 469px;
+                    img{
+                        max-width: 100%;
+                    }
+                }
+                .bag-subtitle{
+                    margin-top: 15px;
+                    @include font-r-medium;
+                    max-width: 320px;
+                    color: #343434;
+                    font-size: 15px;
+                    line-height: 1.5;
+                }
+                .priceCart{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+                    .price{
+                        @include font-r-bold;
+                        font-size: 20px;
+                        color: #343434;
+                    }
+                    .cart{
+                        img{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
