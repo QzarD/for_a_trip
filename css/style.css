@@ -381,6 +381,9 @@ body {
   color: #343434;
   font-size: 15px;
   line-height: 1.5; }
+  @media (max-width: 576px) {
+    .thing-title {
+      font-size: 12px; } }
 
 .priceCart {
   display: flex;
@@ -398,21 +401,32 @@ body {
   text-align: center; }
 
 .buttons {
-  margin-top: 45px;
   display: flex;
-  justify-content: center; }
+  justify-content: space-between;
+  margin: 45px auto 0 auto;
+  max-width: 35%; }
+  @media (max-width: 576px) {
+    .buttons {
+      flex-direction: column;
+      max-width: 70%; }
+      .buttons .button_blue {
+        margin-top: 10px; } }
   .buttons .button_blue {
     font-family: 'Roboto Regular', sans-serif;
     font-size: 32px; }
-    .buttons .button_blue:not(:first-child) {
-      margin-left: 200px; }
     .buttons .button_blue a {
       color: #3acdd5;
-      text-decoration: none; }
-      .buttons .button_blue a:hover {
-        color: #34bec5;
-        transition: text 0.2s ease-in;
-        border-bottom: 2px solid #34bec5; }
+      text-decoration: none;
+      display: inline-block; }
+      .buttons .button_blue a:after {
+        display: block;
+        content: '';
+        height: 2px;
+        width: 0%;
+        background-color: #34bec5;
+        transition: all 0.15s ease-out; }
+      .buttons .button_blue a:hover:after, .buttons .button_blue a:focus:after {
+        width: 50%; }
 
 .row {
   display: flex;
@@ -466,6 +480,8 @@ body {
         display: flex;
         align-items: center;
         justify-content: end; }
+        .header .header-inner .logoSearchCart .SearchCart img {
+          max-width: 100%; }
         .header .header-inner .logoSearchCart .SearchCart .cart {
           margin: 0 30px; }
     .header .header-inner .nav {
@@ -478,11 +494,29 @@ body {
       letter-spacing: 0.18em;
       text-transform: uppercase;
       font-family: 'Quotus Bold', sans-serif; }
+      @media (max-width: 1062px) {
+        .header .header-inner .nav {
+          width: 95%; } }
+      @media (max-width: 576px) {
+        .header .header-inner .nav {
+          display: flex;
+          flex-direction: column;
+          margin-top: 20px; }
+          .header .header-inner .nav li {
+            margin-top: 20px; } }
       .header .header-inner .nav a {
         text-decoration: none;
-        color: #242424; }
-        .header .header-inner .nav a:hover {
-          border-bottom: 2px solid #242424; }
+        color: #242424;
+        display: inline-block; }
+        .header .header-inner .nav a:after {
+          display: block;
+          content: '';
+          height: 2px;
+          width: 0%;
+          background-color: #242424;
+          transition: all 0.15s ease-out; }
+        .header .header-inner .nav a:hover:after, .header .header-inner .nav a:focus:after {
+          width: 50%; }
     .header .header-inner .header-subtitle {
       margin-top: 68px;
       color: black;
@@ -490,6 +524,9 @@ body {
       font-family: 'Quotus Thin', sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.18em; }
+      @media (max-width: 576px) {
+        .header .header-inner .header-subtitle {
+          margin-top: 20px; } }
   .header .header-title {
     position: absolute;
     font-size: 175px;
@@ -502,11 +539,30 @@ body {
     top: 335px;
     left: 50%;
     margin-left: -500px; }
+    @media (max-width: 1062px) {
+      .header .header-title {
+        font-size: 125px;
+        top: 370px;
+        margin-left: -380px; } }
+    @media (max-width: 576px) {
+      .header .header-title {
+        font-size: 60px;
+        top: 370px;
+        margin-left: -175px;
+        margin-top: 40px; } }
 
 .best-travel {
   max-width: 731px;
   position: absolute;
   top: 1020px; }
+  @media (max-width: 576px) {
+    .best-travel .best-travel-title {
+      font-size: 50px; }
+    .best-travel .best-travel-subtitle {
+      font-size: 50px; }
+    .best-travel .best-travel-text {
+      font-size: 30px;
+      line-height: 1.2; } }
   .best-travel-title {
     font-family: 'Quotus Bold', sans-serif;
     font-size: 80px; }
@@ -583,6 +639,10 @@ body {
         border: none;
         border-radius: 50px;
         margin-bottom: 355px; }
+        @media (max-width: 576px) {
+          .sign-up .section-inner .sign-up-FormButton input {
+            width: 175px;
+            padding-left: 30px; } }
       .sign-up .section-inner .sign-up-FormButton .button {
         font-size: 23px;
         margin-left: 25px;
@@ -605,19 +665,47 @@ body {
       list-style: none;
       line-height: 1.7;
       color: black; }
+      @media (max-width: 576px) {
+        .footer .wrapper .col {
+          margin: 0 15px; } }
       .footer .wrapper .col a {
+        font-family: 'Roboto Lt', sans-serif;
         text-decoration: none;
         color: black;
-        font-family: 'Roboto Lt', sans-serif;
-        font-size: 30px; }
-        .footer .wrapper .col a:hover {
-          border-bottom: 2px solid #242424; }
+        font-size: 30px;
+        display: inline-block; }
+        @media (max-width: 576px) {
+          .footer .wrapper .col a {
+            font-size: 18px; } }
+        .footer .wrapper .col a:after {
+          display: block;
+          content: '';
+          height: 2px;
+          width: 0%;
+          background-color: black;
+          transition: all 0.15s ease-out; }
+        .footer .wrapper .col a:hover:after, .footer .wrapper .col a:focus:after {
+          width: 50%; }
       .footer .wrapper .col .text {
         font-family: 'Quotus Bold', sans-serif;
         font-size: 42px; }
+        @media (max-width: 576px) {
+          .footer .wrapper .col .text {
+            font-size: 30px; } }
   .footer .social {
     margin: 200px 0 100px 0;
     display: flex;
     justify-content: center; }
-    .footer .social .block:not(:first-child) {
-      margin-left: 20px; }
+    .footer .social .block {
+      display: inline-block; }
+      .footer .social .block:not(:first-child) {
+        margin-left: 20px; }
+      .footer .social .block:after {
+        display: block;
+        content: '';
+        height: 2px;
+        width: 0%;
+        background-color: black;
+        transition: all 0.15s ease-out; }
+      .footer .social .block:hover:after, .footer .social .block:focus:after {
+        width: 50%; }

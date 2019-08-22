@@ -68,6 +68,15 @@
 
 // <----- COMMON 
 
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-sm-max: 767px;
+$screen-md-max: 991px;
+$screen-mdLg-max: 1062px;
+$screen-lg-max: 1199px;
 
 body{
     color: #242424;
@@ -117,6 +126,9 @@ body{
     color: #343434;
     font-size: 15px;
     line-height: 1.5;
+    @media (max-width: $screen-sm){
+        font-size: 12px;
+    }
 }
 
 .priceCart{
@@ -142,22 +154,34 @@ body{
 }
 
 .buttons{
-    margin-top: 45px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 45px auto 0 auto;
+    max-width: 35%;
+    @media (max-width: $screen-sm){
+        flex-direction: column;
+        max-width: 70%;
+        .button_blue{
+            margin-top: 10px;
+        }
+    }
     .button_blue{
         @include font-r-regular;
         font-size: 32px;
-        &:not(:first-child){
-            margin-left: 200px;
-        }
         a{
             color: #3acdd5;
             text-decoration: none;
-            &:hover{
-            color: #34bec5;
-            transition: text 0.2s ease-in;
-            border-bottom: 2px solid #34bec5;
+            display: inline-block;
+            &:after{
+                display: block;
+                content: '';
+                height: 2px;
+                width: 0%;
+                background-color: #34bec5;
+                transition: all 0.15s ease-out;
+            }
+            &:hover:after, &:focus:after{
+                width: 50%;
             }
         }
     }
@@ -226,6 +250,9 @@ body{
                 display: flex;
                 align-items: center;
                 justify-content: end;
+                img{
+                    max-width: 100%;
+                }
                 .cart{
                     margin: 0 30px;
                 }
@@ -241,11 +268,31 @@ body{
             letter-spacing: 0.18em;
             text-transform: uppercase;
             @include font-q-bold;
+            @media (max-width: $screen-mdLg-max){
+                width: 95%;
+            }
+            @media (max-width: $screen-sm){
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                li{
+                    margin-top: 20px;
+                }
+            }
             a{
                 text-decoration: none;
                 color: #242424;
-                &:hover{
-                    border-bottom: 2px solid #242424;
+                display: inline-block;
+                &:after{
+                    display: block;
+                    content: '';
+                    height: 2px;
+                    width: 0%;
+                    background-color: #242424;
+                    transition: all 0.15s ease-out;
+                }
+                &:hover:after, &:focus:after{
+                    width: 50%;
                 }
             }
         }
@@ -256,6 +303,9 @@ body{
             @include font-q-thin;
             text-transform: uppercase;
             letter-spacing: 0.18em;
+            @media (max-width: $screen-sm){
+                margin-top: 20px;
+            }
         }
     }
     .header-title{
@@ -270,6 +320,17 @@ body{
         top: 335px;
         left: 50%;
         margin-left:-500px;
+        @media (max-width: $screen-mdLg-max){
+            font-size: 125px;
+            top: 370px;
+            margin-left:-380px;
+        }
+        @media (max-width: $screen-sm){
+            font-size: 60px;
+            top: 370px;
+            margin-left:-175px;
+            margin-top: 40px;
+        }
     }
 }
 
@@ -277,6 +338,18 @@ body{
     max-width: 731px;
     position: absolute;
     top: 1020px;
+    @media (max-width: $screen-sm){
+        .best-travel-title{
+            font-size: 50px;
+        }
+        .best-travel-subtitle{
+            font-size: 50px;
+        }
+        .best-travel-text{
+            font-size: 30px;
+            line-height: 1.2;
+        }
+    }
     &-title{
         @include font-q-bold;
         font-size: 80px;
@@ -383,6 +456,10 @@ body{
                 border: none;
                 border-radius: 50px;
                 margin-bottom: 355px;
+                @media (max-width: $screen-sm){
+                    width: 175px;
+                    padding-left: 30px;
+                }
             }
             .button{
                 font-size: 23px;
@@ -412,18 +489,36 @@ body{
             list-style: none;
             line-height: 1.7;
             color: black;
+            @media (max-width: $screen-sm){
+                margin: 0 15px;
+            }
             a{
+                @include font-r-lt;
                 text-decoration: none;
                 color: black;
-                @include font-r-lt;
                 font-size: 30px;
-                &:hover{
-                    border-bottom: 2px solid #242424;
+                display: inline-block;
+                @media (max-width: $screen-sm){
+                    font-size: 18px;
+                }
+                &:after{
+                    display: block;
+                    content: '';
+                    height: 2px;
+                    width: 0%;
+                    background-color: black;
+                    transition: all 0.15s ease-out;
+                }
+                &:hover:after, &:focus:after{
+                    width: 50%;
                 }
             }
             .text{
                 @include font-q-bold;
                 font-size: 42px;
+                @media (max-width: $screen-sm){
+                    font-size: 30px;
+                }
             }
         }
     }
@@ -432,8 +527,21 @@ body{
         display: flex;
         justify-content: center;
         .block{
+            display: inline-block;
             &:not(:first-child){
                 margin-left: 20px;
-            }}
+            }
+            &:after{
+                display: block;
+                content: '';
+                height: 2px;
+                width: 0%;
+                background-color: black;
+                transition: all 0.15s ease-out;
+            }
+            &:hover:after, &:focus:after{
+                width: 50%;
+            }
+        }
     }
 }
